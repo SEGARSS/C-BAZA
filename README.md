@@ -21,7 +21,7 @@
 
 <details>
 <summary> 
-Project1 - Основы(Начало) //Основы - Урок 1-2, видео № с 1 по 4.
+1_lesson_ - Основы(Начало) //Основы - Урок 1-2, видео № с 2 по 4.
 </summary>
 
 * [Ссылка на видео - 3](https://www.youtube.com/watch?v=ADIhuD_vQ5g&list=PLQOaTSbfxUtCrKs0nicOg2npJQYSPGO9r&index=3)
@@ -47,7 +47,7 @@ Project1 - Основы(Начало) //Основы - Урок 1-2, видео № с 1 по 4.
 
 <details>
 <summary> 
-Project2 - Escape - последовательности. Как использовать. C++ для начинающих. Урок #3. Видео №5
+2_lesson - Escape - последовательности. Как использовать. C++ для начинающих. Урок #3. Видео №5
 </summary>
 
 * [Ссылка на видео - 5](https://www.youtube.com/watch?v=DY7p1IDIioM&list=PLQOaTSbfxUtCrKs0nicOg2npJQYSPGO9r&index=5)
@@ -63,7 +63,7 @@ Project2 - Escape - последовательности. Как использовать. C++ для начинающих. Ур
 
 <details>
 <summary> 
-Project3 - Типы данных в C++. C++ для начинающих, а также переменные. Способы объявления. Правила именования. Урок #4-#5. Видео №6 - 7.
+3_lesson - Типы данных в C++. C++ для начинающих, а также переменные. Способы объявления. Правила именования. Урок #4-#5. Видео №6 - 7.
 </summary>
 
 * [Ссылка на видео - 6](https://www.youtube.com/watch?v=pwUNLjgw7lY&list=PLQOaTSbfxUtCrKs0nicOg2npJQYSPGO9r&index=6)
@@ -79,7 +79,7 @@ Project3 - Типы данных в C++. C++ для начинающих, а также переменные. Способы об
 
 <details>
 <summary> 
-Project4 - Константы. Ключевое слово const. C++ для начинающих. Урок #6. Видео №8.
+4_lesson - Константы. Ключевое слово const. C++ для начинающих. Урок #6. Видео №8.
 </summary>
 
 * [Ссылка на видео - 8](https://www.youtube.com/watch?v=RkrCWn3_p1Y&list=PLQOaTSbfxUtCrKs0nicOg2npJQYSPGO9r&index=8)
@@ -91,7 +91,7 @@ Project4 - Константы. Ключевое слово const. C++ для начинающих. Урок #6. Видео №
 
 <details>
 <summary> 
-Project5 - Ввод данных. Cin. Пример. Синтаксис. C++ для начинающих. Урок #7. Видео №9.
+5_lesson - Ввод данных. Cin. Пример. Синтаксис. C++ для начинающих. Урок #7. Видео №9.
 </summary>
 
 * [Ссылка на видео - 9](https://www.youtube.com/watch?v=Hkd2r5yEMvc&list=PLQOaTSbfxUtCrKs0nicOg2npJQYSPGO9r&index=9)
@@ -102,7 +102,7 @@ Project5 - Ввод данных. Cin. Пример. Синтаксис. C++ для начинающих. Урок #7. Вид
 
 <details>
 <summary> 
-Project6 - Операторы. Арифметические операции с числами. C++ для начинающих. Урок #8. Видео №10-11, с разбром домашней работы.
+6_lesson - Операторы. Арифметические операции с числами. C++ для начинающих. Урок #8. Видео №10-11, с разбром домашней работы.
 </summary>
 
 * [Ссылка на видео - 10](https://www.youtube.com/watch?v=aA8nhHbrC9Y&list=PLQOaTSbfxUtCrKs0nicOg2npJQYSPGO9r&index=10)
@@ -116,7 +116,7 @@ Project6 - Операторы. Арифметические операции с числами. C++ для начинающих. Уро
 
 <details>
 <summary> 
-Project7 - Инкремент и декремент. Постфиксный и префиксный. Пример. Синтаксис. C++ для начинающих. Урок #9. Видео №12.
+7_lesson - Инкремент и декремент. Постфиксный и префиксный. Пример. Синтаксис. C++ для начинающих. Урок #9. Видео №12.
 </summary>
 
 * [Ссылка на видео - 12](https://www.youtube.com/watch?v=ot4yp_vgT2E&list=PLQOaTSbfxUtCrKs0nicOg2npJQYSPGO9r&index=12)
@@ -129,7 +129,7 @@ Project7 - Инкремент и декремент. Постфиксный и префиксный. Пример. Синтаксис. C
 
 <details>
 <summary> 
-Project8 - Сокращенные арифметические формы +=, -= и т д. C++ для начинающих. Урок #10. Видео №13.
+8_lesson - Сокращенные арифметические формы +=, -= и т д. C++ для начинающих. Урок #10. Видео №13.
 </summary>
 
 * [Ссылка на видео - 13](https://www.youtube.com/watch?v=id62LvJXK8Q&list=PLQOaTSbfxUtCrKs0nicOg2npJQYSPGO9r&index=13)
