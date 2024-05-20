@@ -37,8 +37,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lesson_13_dz_2", "lesson_13
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lesson_14", "lesson_14\lesson_14.vcxproj", "{83FA2F83-552E-4A54-B388-F100659D6945}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "c-Baza", "c-Baza", "{9E5A828A-128F-460A-B9F9-7A2BDAA414F1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -186,10 +184,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{F0655851-DC95-4F9A-B74B-84CEAE1E34B3} = {9E5A828A-128F-460A-B9F9-7A2BDAA414F1}
-		{F9D14F6E-FEB1-487A-AA81-0042EA815FAF} = {9E5A828A-128F-460A-B9F9-7A2BDAA414F1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {75A7A686-06C2-48B7-B422-D37E864EE3E5}
