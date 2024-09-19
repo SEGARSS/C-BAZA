@@ -11,8 +11,8 @@ void main()
 
 	/* Объявление константы, желательно прописывать с большой буквы,
 	чтобы мы точно понимали для себя что это константа и она не должна меняться */
-	//const int COUNT_DAYS_IN_WEEK = 7; 
-	//cout << COUNT_DAYS_IN_WEEK <<"\n";
+	const int COUNT_DAYS_IN_WEEK1 = 7; 
+	cout << COUNT_DAYS_IN_WEEK1 <<"\n";
 
 
 	const int COUNT_DAYS_IN_WEEK = 7;

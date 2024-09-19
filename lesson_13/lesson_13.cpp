@@ -11,13 +11,22 @@ void main()
 
 	int a = 0;
 
-	do
-	{
-		cout << "Переменная а = " << a << endl;
-		a++;
-	} while (a < 10);
+	cout << "Пример когда цикл while" << endl;
+	while (a < 10) 
 	{
 		cout << "Переменная а = " << a << endl;
 		a++;
 	}
+
+	cout << endl;
+
+	// Суть того, что данный цикл do while покажет 10 при данном уловии b < 10. 
+	int b = 10;
+
+	cout << "Пример когда цикл do while" << endl;
+	do
+	{
+		cout << "Переменная b = " << b << endl;
+		b++;
+	}while (b < 10);	
 }
