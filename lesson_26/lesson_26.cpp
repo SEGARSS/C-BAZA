@@ -18,6 +18,7 @@ void main()
 {
 	setlocale(LC_ALL, "ru");
 	srand(time(NULL));
+
 	int arr[3][5];
 	cout << arr[0][2];
 }

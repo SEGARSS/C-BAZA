@@ -13,31 +13,29 @@ void main()
 
 	int const SIZE = 10; 
 	int arr[SIZE];
-	bool alreadyThere;
+	bool already;
 
-	for (int i = 0; i < SIZE; ) /*ƒанный весь цикл, заполн€ет масив слайными числами, провер€т чтоб в массив
-		не попали одинаковые числа. Ѕолее подробно Project29_dz.*/
+	for (int i = 0; i < SIZE; )
 	{
-		alreadyThere = false;
-		int newRanomValue = rand() % 20;
+		already = false;
+		int ranom = rand() % 20;
+
 		for (int j = 0; j < i; j++) 
 		{
-			if (arr[j] == newRanomValue)
+			if (arr[j] == ranom)
 			{
-				alreadyThere = true;
+				already = true;
 				break;
 			}
 		}
-		if (alreadyThere != true)
+		if (already!= true)
 		{
-			arr[i] = newRanomValue;
+			arr[i] = ranom;
 			i++;
 		}
 	}
 
-
-	int min = arr[0]; /*ћы сразу присваеваем нашей минимальной переменной нулевой элемент массива
-	какой бы он небыл и будем его провер€ть.*/
+	int min = arr[0]; //ћы сразу присваеваем нашей минимальной переменной нулевой элемент массива	какой бы он небыл и будем его провер€ть.
 
 	for (int i = 1; i < SIZE; i++) /*—десь i мы присваеваем 1й элемент масива, так как нулевой элемент
 		массива мы уже присвоили переменой min.*/
@@ -51,13 +49,10 @@ void main()
 		}
 	}
 
-
-
-	for (int i = 0; i < SIZE; i++) /*выводить на терминал все случайные чисела, еслиб без счЄтчика это делать, 
-		то выведетьс€ ток одно число, самое первое.*/ 
+	for (int i = 0; i < SIZE; i++)
 	{
 		cout << arr[i] << endl;
 	}
-	cout << "Ќаименьшее число в массиве - " << min << endl; // ¬ывод в терминал, минимальное число из всех чисел.
 
+	cout << "Ќаименьшее число в массиве - " << min << endl; 
 }
