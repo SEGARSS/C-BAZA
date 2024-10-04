@@ -8,6 +8,7 @@ using namespace std;
 //--------------------------------------------------------------------------------------------------------------------
 void FillArray(int arr[], const int SIZE)//FillArray - Заполняет массив.
 {
+	int a = sizeof(arr); 
 	for (int i = 0; i < SIZE; i++)
 	{
 		arr[i] = rand() % 10;
@@ -29,6 +30,8 @@ void main()
 
 	const int SIZE = 20; //SIZE - Размер.
 	int arr[SIZE];
+
+	int a = sizeof(arr);
 
 	//Тким образом, мы с помощью созданных фукций, сразу заполнели масив и вывели его в терминал.
 	FillArray(arr, SIZE); // Заполнил масив.
