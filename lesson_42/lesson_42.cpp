@@ -17,6 +17,7 @@ void main()
 		*(arr + 2) << endl << 
 		*(arr + 3) << endl << 
 		*(arr + 4) << endl;
+
 	cout << "===============================" << endl;
 
 	for (int i = 0; i < SIZE; i++)
