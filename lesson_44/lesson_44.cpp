@@ -16,13 +16,16 @@ void main()
 {
 	setlocale(LC_ALL, "Rus");
 
+	cout << "Пример, передачи параметров при их присвоении:" << endl;
 	int a = 0, b = 0, c =1;
 	cout << "a = " << a << endl;
 	cout << "b = " << b << endl;
 	cout << "c = " << c << endl;
 	cout << "==================" << endl;
 
-	cout << "foo" << endl;
+	cout << endl;
+
+	cout << "Пример, передачи параметров по указателям через функцию foo:" << endl;
 	foo(&a,&b,&c); 
 	cout << "a = " << a << endl;
 	cout << "b = " << b << endl;
