@@ -5,40 +5,60 @@
 #include<ctime>
 using namespace std;
 
-void FillArray(int* const arr, const int size) // Заполняет массив данными.
+//------------------------------------------------------------------------------------------------
+void FillArray(int *const arr, const int size) // Заполняет массив данными. 
 {
 	for (int i = 0; i < size; i++)
 	{
-		arr[i] = rand() % 10;
+		int num;
+		do 
+		{
+			num = rand() % 9 + 1; // Генерация с 1 по 9.
+		} 
+		while (num == 6); // Число 6 исключается из генерации. 
+
+		arr[i] = num;
 	}
 }
-
-void ShowArray(const int* const arr, const int size) // выводит данные в терминал массива.
+//------------------------------------------------------------------------------------------------
+void ShowArray(const int *const arr, const int size) // выводит данные в терминал массива.
 {
 	for (int i = 0; i < size; i++)
 	{
-		cout << arr[i] << "\t";
+		cout << arr[i] << " ";
 	}
 	cout << endl;
 } 
-
-void push_back(int*& arr, int& size, const int value) // Добавляет элемент массива. ( в конец)
+//------------------------------------------------------------------------------------------------
+// (*&) - указатель на адрес массива, а не просто на его данные.
+void push_back(int *&arr, int &size, const int value) // Добавляет элемент массива. ( в конец) 
 {
-	int* newArray = new int[size+1];
+	int *newArray = new int [size + 1];
 	for (int i = 0; i < size; i++)
 	{
 		newArray[i] = arr[i];
 	}
-	newArray[size] = value;
+
+	newArray[size] = value; // В последнюю ячейку массива добавляем число.
+	/* 
+	Если вместо size укажем 5 - newArray[5] = value; то будет считать не в последний элемент массива,
+	а в 5й индекс, что не совсем правильно, так как массив может быть и 7 и 8 элементов ячеек.
+	*/
+
 	size++;
 	delete[] arr;
 	arr = newArray;
 } 
-
-void pop_vack(int*& arr, int& size) // Удалем элемент в массиве. (в конце)
+//------------------------------------------------------------------------------------------------
+void pop_vack(int *&arr, int &size) // Удалем элемент в массиве. (в конце)
 {
+	/*
+	Пишем (size--;) в начале функции, чтоб сразу удалить последний элемент.
+	Если напишем в конце, то мы лишний раз скопируем последний эелемнт а пото только удалим, поэтому мы не копируем
+	послдений элемент а сразу его удаляем.
+	*/
 	size--;
-	int* newArray = new int[size];
+	int *newArray = new int [size];
 	for (int i = 0; i < size; i++)
 	{
 		newArray[i] = arr[i];
@@ -46,51 +66,119 @@ void pop_vack(int*& arr, int& size) // Удалем элемент в масси
 	delete[] arr;
 	arr = newArray;
 }
-
-void push_back_nach(int*& arr, int& size, const int value) // Добавляет элемент массива. (в начало)
+//------------------------------------------------------------------------------------------------
+void push_back_nach(int *&arr, int &size, const int value) // Добавляет элемент массива. (в начало)
 {
-	int* newArray = new int[size + 1];
+	int *newArray = new int[size + 1];
 	for (int i = 0; i < size; i++)
 	{
 		newArray[i + 1] = arr[i];
 	}
-	newArray[0] = value;
+	newArray[0] = value; //Сдесь уже указываем индекс, так как массив всегда начинает сво ячейку с индеса (0).
 	++size;
 	delete[] arr;
 	arr = newArray;
 }
-
-void pop_vack_nach(int*& arr, int& size) // Удалем элемент в массиве. (в начале)
+//------------------------------------------------------------------------------------------------
+void pop_vack_nach(int *&arr, int &size) // Удалем элемент в массиве. (в начале)
 {
-	
-	int* newArray = new int[size-1];
-	for (int i = 1; i < size; i++)
+	int *newArray = new int [size - 1];
+	/*
+	В массиве первый элемент находится по индексу 0. 
+	Когда мы хотите удалить его, нам нужно скопировать все остальные элементы (с индексами от 1 до size - 1) в новый массив, 
+	начиная с индекса 0. Поэтому присваем i = 1.
+	*/
+	for (int i = 1; i < size; i++) 
 	{
-		newArray[i-1] = arr[i];
+		newArray[i - 1] = arr[i];
 	}
 	size--;
 	delete[] arr;
 	arr = newArray;
 }
+//------------------------------------------------------------------------------------------------
+void push_back_middle(int *&arr, int &size, const int value) // Добавляет элемент массива. (в середине)
+{
+	int *newArray = new int[size + 1];
+	int middleIndex = size / 2; // Индекс для вставки нового элемента (середина любая, тоесть может быть и 4 если сам массив на 8 ячеек.
 
+	// Копируем элементы до середины
+	for (int i = 0; i < middleIndex; i++) 
+	{
+		newArray[i] = arr[i];
+	}
 
+	// Вставляем новый элемент
+	newArray[middleIndex] = value;
+
+	// Копируем оставшиеся элементы
+	for (int i = middleIndex; i < size; i++) 
+	{
+		newArray[i + 1] = arr[i];
+	}
+
+	++size;
+	delete[] arr;
+	arr = newArray;
+}
+//------------------------------------------------------------------------------------------------
+void pop_vack_middle(int *&arr, int &size) // Удалем элемент в массиве. (в середине)
+{
+	int *newArray = new int[size - 1];
+	int middleIndex = size / 2; // Индекс для удаления элемента в середине.
+
+	// Копируем элементы до середины
+	for (int i = 0; i < middleIndex; i++)
+	{
+		newArray[i] = arr[i];
+	}
+
+	// Копируем оставшиеся элементы
+	for (int i = middleIndex; i < size; i++)
+	{
+		newArray[i - 1] = arr[i];
+	}
+
+	--size;
+	delete[] arr;
+	arr = newArray;
+}
+//------------------------------------------------------------------------------------------------
 void main()
 {
 	setlocale(LC_ALL, "ru");
+	srand(time(NULL));
+
 	int size = 5;
 	int *arr = new int[size];
-	FillArray(arr, size);
-	ShowArray(arr, size);
-	push_back(arr, size, 111);
-	ShowArray(arr, size);
-	pop_vack(arr, size);
-	ShowArray(arr, size);
-	push_back_nach(arr,size,111);
-	ShowArray(arr, size);
-	pop_vack_nach(arr, size);
-	ShowArray(arr, size);
-	delete[] arr;
 
+	cout << "Выводим проинициализированный масив:" << "\t" << "    ";
+	FillArray(arr, size);  // Заполняем массив.
+	ShowArray(arr, size); // Выводим данные в терминал.
+
+	cout << "Добавили элемет в конец массива:" << "\t" << "    ";
+	push_back(arr, size, 111); // Добавляем элемент в конец массива.
+	ShowArray(arr, size);	  // Выводим данные в терминал.
+
+	cout << "Удалили элемет в конце массива:" << "\t" << "\t" << "    ";
+	pop_vack(arr, size);  // Удаляем елемент в массиве в конце.
+	ShowArray(arr, size);// Выводим данные в терминал.
+
+	cout << "Добавили элемет в начало массива:" << "\t";
+	push_back_nach(arr,size,111); // Добавляем элемент в массив в начало.
+	ShowArray(arr, size);        // Выводим данные в терминал.
+
+	cout << "Удалили элемет в начале массива:" << "\t" << "    ";
+	pop_vack_nach(arr, size); // Удаляем елемент в массиве в начале.
+	ShowArray(arr, size);	 // Выводим данные в терминал.
+
+	cout << "Добавили элемет в середину массива:" << "\t";
+	push_back_middle(arr, size, 111); // Добавляем элемент в массив в середину.
+	ShowArray(arr, size);            // Выводим данные в терминал.
+
+	cout << "Удалили элемет в середине массива:" << "\t" << "    ";
+	pop_vack_middle(arr, size); // Удаляем елемент в массиве в середину.
+	ShowArray(arr, size);	   // Выводим данные в терминал.
+
+	delete[] arr; // Удаляем массив.
 }
-
-/*Доделай.  Чтобы удалить элемент по середине и добавить.*/
