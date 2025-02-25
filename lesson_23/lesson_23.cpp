@@ -26,7 +26,6 @@ void main()
 	for (int i = 0; i < SIZE1; i++)
 	{
 		cout << arr1[i] << endl;
-
 	}
 	cout << endl << endl;
 
